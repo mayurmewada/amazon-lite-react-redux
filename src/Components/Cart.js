@@ -20,12 +20,12 @@ const Cart = () => {
                       <Card.Img
                       className="w-100"
                         variant="left"
-                        src={product.imageUrl}
+                        src={product.productImageUrl}
                       />
                     </Col>
                     <Col lg={6}>
                       <Card.Title className="my-auto">
-                        {product.name}
+                        {product.productName}
                       </Card.Title>
                       <Card.Text className="my-auto">
                         Quantity : {product.quantity}
@@ -33,7 +33,7 @@ const Cart = () => {
                     </Col>
                     <Col className="d-flex px-0" lg={3}>
                       <Card.Text className="my-auto">
-                        Rs. {product.price}
+                        Rs. {product.productPrice}
                       </Card.Text>
                     </Col>
                   </Row>

@@ -1,22 +1,21 @@
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Cart from "./Components/Cart";
-import Home from "./Components/Home";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+import CreateNewProduct from "./Components/CreateNewProduct";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
-      <Container>
-        <Row className="py-3">
-          <Col lg={8}>
-            <Home />
-          </Col>
-          <Col lg={4}>
-            <Cart />
-          </Col>
-        </Row>
-      </Container>
+      <BrowserRouter>
+        <Header />
+        <Container>
+          <Routes>
+            <Route path="/createnewproduct" element={<CreateNewProduct />} />
+            <Route path="/" element={<Main />} />
+          </Routes>
+        </Container>
+      </BrowserRouter>
     </div>
   );
 }
